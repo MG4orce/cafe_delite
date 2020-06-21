@@ -4,13 +4,15 @@ import requests
 import bs4
 import os
 
+# Get user input for the recipe
 recipeName = input('Enter name of a recipe from CafeDelites.com: \n')
 
+# Formatting user input for URL
 if "-" not in recipeName:   # checks to see if the input does not contain a hypen
     recipeName = recipeName.replace(" ", "-").lower()
 
 baseUrl = 'https://cafedelites.com/'
-recipeUrl = baseUrl + recipeName + '/'
+recipeUrl = baseUrl + recipeName + '/'  # Combine for the full URL
 
 
 def main():
